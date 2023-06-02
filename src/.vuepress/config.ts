@@ -1,9 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 import { searchPlugin } from "@vuepress/plugin-search";
-import { getDirname, path } from "@vuepress/utils";
 
-const __dirname = getDirname(import.meta.url);
 
 export default defineUserConfig({
   base: "/XXXWeiiBlog/",
@@ -18,13 +16,6 @@ export default defineUserConfig({
 
   theme,
 
-  alias: {
-    "@theme-hope/modules/blog/components/BlogHero": path.resolve(
-      __dirname,
-      "./components/BlogHero.vue"
-    ),
-
-  },
 
   // Enable it with pwa
   // shouldPrefetch: false,
@@ -32,7 +23,6 @@ export default defineUserConfig({
   plugins: [
     searchPlugin({
       // 你的选项
-    }),
-
+    })
    ]
 });

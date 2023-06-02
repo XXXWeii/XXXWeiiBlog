@@ -4,8 +4,8 @@ import { enSidebar} from "./sidebar/index.js";
 
 const footerICP_HTML = `
 <a class="footer-icp" href="https://beian.miit.gov.cn" target="_blank">
-<img src="//file.mo7.cc/static/img/beian.png" />粤ICP备2023032935号-1
-</a>&nbsp;&nbsp;|&nbsp;&nbsp;主题：<a href="https://theme-hope.vuejs.press/">VuePress Theme Hope</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/intro">关于我的故事</a>`;
+<img alt="备案号" src="/XXXWeiiBlog/assets/images/beian.png" />粤ICP备2023032935号-1
+</a>&nbsp;|&nbsp;主题：<a href="https://theme-hope.vuejs.press/">VuePress Theme Hope</a>&nbsp;|&nbsp;<a href="/intro">关于我的故事</a>`;
 
 export default hopeTheme({
   hostname: "https://mister-hope.github.io",
@@ -32,10 +32,18 @@ export default hopeTheme({
   logo: "/logo.jpg",
 
   repo: "https://github.com/XXXWeii/XXXWeiiBlog",
+  repoLabel: "GitHub",
+  repoDisplay: true,
 
-  hotReload: true,
-
+  // hotReload: true,
+  // 是否开启全屏模式
   fullscreen: true,
+  // 是否显示页面最后更新时间
+  lastUpdated:true,
+  // 是否显示页面贡献者
+  contributors:true,
+  // 是否展示编辑此页链接
+  editLink:true,
 
   backToTop:true,
 
@@ -45,12 +53,12 @@ export default hopeTheme({
     description:"前途是光明的，道路是曲折的。",
     medias: {
       GitHub: "https://github.com/XXXWeii",
-      Gitee: "https://gitee.com/zjw977020546",
+      Gitee: "https://gitee.com/XXXWeii",
       Twitter: "https://twitter.com/zjw977020546",
       Facebook: "https://www.facebook.com/QQ977020546",
       Gmail: "mailto:zjw977020546@gmail.com",
-      Wechat: "/images/WeChat.jpg",
-      QQ: "/images/QQ.jpg",
+      Wechat: "/XXXWeiiBlog/assets/images/WeChat.jpg",
+      QQ: "/XXXWeiiBlog/assets/images/QQ.jpg"
     },
   },
 
@@ -61,8 +69,6 @@ export default hopeTheme({
 
       // sidebar
       sidebar: enSidebar,
-
-      
 
       footer: footerICP_HTML,
 
@@ -116,6 +122,11 @@ export default hopeTheme({
 
     seo: true,
 
+    // feed支持
+    feed:{
+      rss:true
+    },
+
     // all features are enabled for demo, only preserve features you need here
     mdEnhance: {
       align: true,
@@ -162,6 +173,7 @@ export default hopeTheme({
     // uncomment these if you want a PWA
     pwa: {
       favicon: '/favicon.ico',
+      update:"available",
       cacheHTML: true,
       cachePic: true,
       appendBase: true,
