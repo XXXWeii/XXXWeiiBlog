@@ -41,7 +41,7 @@ export default hopeTheme({
   // 是否显示页面最后更新时间
   lastUpdated:true,
   // 是否显示页面贡献者
-  contributors:true,
+  contributors:false,
   // 是否展示编辑此页链接
   editLink:true,
 
